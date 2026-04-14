@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing Start</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: "Open Sans", "Segoe UI", "sans-serif";
+        }
+        body{
+            background-image: radial-gradient(rgb(40, 40, 50), rgb(10, 0, 10));
+        }
+        .shortnavbar{
+                height: 60px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #454545;
+                font-weight: bold;
+        }
+        .lii{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               color: #d5d5d5;
+               cursor: pointer;
+               gap: 22px;
+        }
+        .icons{
+                display: flex;
+               align-items: center;
+               color: #d5d5d5;
+               cursor: pointer;
+               gap: 15px;
+        }
+        .lii li, .icons li{
+                list-style: none;
+        }
+        .lii li:hover, .icons li:hover{
+                color: black;
+                transition: 0.3s;
+        }
+        .lii button{
+                height: 30px;
+                width: 60px;
+                background-color: rgb(0, 157, 255);
+                border: none;
+                border-radius: 8px;
+                color: black;
+        }
+        .lii button:hover{
+                color: white;
+                background-color: rgb(10, 54, 82);
+                border: 2px solid rgb(10, 54, 82);
+                cursor: pointer;
+                transition: 0.3s;
+        }
+/* <!----------horizantal navbar complete-----------> */
+.sidebar{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+}
+.side{
+        height: 110vh;
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        gap: 15px;
+        padding-left: 20px;
+        box-shadow: 0px 0px 4px gainsboro;
+}
+.side li, .side li p{
+        text-decoration: none;
+        color: #d5d5d5;
+        font-size: 15px;
+        display: flex;
+        gap: 5px;
+        align-items: center;   
+        list-style: none; 
+        cursor: pointer;
+}
+.side li:hover, .side li p:hover{
+        color: rgb(87, 83, 83);
+        transition: 0.3s;
+}
+/* <!------sidebar complete------------> */
+.container{
+            height: 110vh;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+}
+.container .boxes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+}
+.container .boxes .button{
+            height: 51.25px;
+            width: 220.19px;
+            border: 1px solid gainsboro;
+            background-color: #454545;
+            border-radius: 8px;
+            color: #d5d5d5;
+            cursor: pointer;
+}
+.container .boxes .button:hover{
+        background-color: #847a7a;
+        transition: 0.3s;
+}
+#box{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    color: #c2bebe;
+}
+#box:active{
+        transform: scale(1.5);
+        transition: all 0.5s ease-in-out;
+}
+#box2{
+        flex-wrap: wrap;
+}
+/* <!---------sidebar section complete---------> */
+.icon{
+    width: 100%;
+    background-color: #454545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+@media screen and (min-width: 0px) {
+        .shortnavbar{
+                height: 75px;
+                flex-direction: column;
+        }
+        .lii{
+            flex-wrap: wrap;
+            height: 70px;
+            width: 100%;
+            gap: 12px;
+        }
+        .icons{
+                display: none;
+        }
+        .container{
+                gap: 10px;
+        }
+        .side li p{
+                display: none;
+        }
+        .side{
+            width: 90px;
+        }
+        .container .boxes img{
+            height: 200px;
+            width: 200px;
+        }
+        .container .boxes{
+        height: 160px;
+        width: 230px;
+    }
+    .container .boxes .button{
+            font-size: 11px;
+    }
+    #box2{
+            height: 200px;
+    }
+    .sidebar{
+            height: 110vh;
+    }
+    .icon{
+        height: 100px;
+}
+.icon img{
+        height: 70px;
+        width: 320px;
+}
+}
+@media screen and (min-width: 480px){
+    .container .boxes{
+        height: 160px;
+        width: 350px;
+    }
+    .icon img{
+        height: 80px;
+        width: 350px;
+}
+}
+@media screen and (min-width: 768px){
+        .shortnavbar{
+                flex-direction: row;
+        }
+        .lii{
+            width: 65%;
+            padding-left: 10px;
+        }
+        .icons{
+                display: flex;
+                width: 10%;
+                height: 70px;
+        }
+        .container .boxes{
+        height: 160px;
+        width: 580px;
+    }
+    #box2{
+            height: 150px;
+    }
+    .icon img{
+        height: 90px;
+        width: 400px;
+}
+}
+@media screen and (min-width: 990px){
+    .lii{
+            width: 50%;
+            padding-left: 10px;
+        }
+    .container .boxes{
+        height: 160px;
+        width: 690px;
+    }
+    .container .boxes img{
+            height: 123.32px;
+            width: 600px;
+}
+.side{
+    width: 180px;
+        }
+.side li p{
+        display: flex;
+}
+.icon img{
+        height: 100px;
+        width: 460px;
+}
+}
+</style>
+<body>
+        <nav>
+            <ul class="shortnavbar">
+                <div class="lii">
+                <li>File</li>
+                <li>Edit</li>
+                <li>Image</li>
+                <li>Layer</li>
+                <li>Select</li>
+                <li>Filter</li>
+                <li>View</li>
+                <li>More</li>
+                <button>Account</button>
+            </div>
+                <div class="icons">
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-google"></i></li>
+            </div>
+            </ul>
+        </nav>
+    <!----------horizantal navbar complete----------->
+    <nav>
+        <ul class="sidebar">
+        <div class="side">
+            <li><i class="fas fa-home"></i> <p>Home</p></li>
+            <li><i class="fas fa-desktop"></i> <p>This Device</p></li>
+            <li><i class="fas fa-hdd"></i> <p>PeaDrive</p></li>
+            <li><i class="fab fa-dropbox"></i> <p>Dropbox</p></li>
+            <li><i class="fas fa-cloud"></i> <p>OneDrive</p></li>
+            <li><i class="fab fa-google-drive"></i> <p>Google Drive</p></li>
+            <li><i class="fas fa-share-alt"></i> <p>Shared Drives</p></li>
+            <li><i class="fas fa-user-friends"></i> <p>Shared with me</p></li>
+            <li><i class="fas fa-folder"></i> <p>Private Folder</p></li>
+            <li><i class="fas fa-gamepad"></i> <p>PeaGames</p></li>
+        </div>
+        <div class="container">
+            <div class="boxes" id="box1">
+                <img src="photo.svg">
+            </div>
+            <div class="boxes" id="box2">
+                <button class="button">
+                    <i class="fas fa-file"></i> New Project
+                  </button>
+                  <button class="button">
+                    <i class="fas fa-desktop"></i> Open From Computer
+                  </button>
+                  <button class="button">
+                    <i class="fas fa-image"></i> Templates
+                  </button>
+            </div>
+            <div class="boxes" id="box">Drop any files here</div>
+        </div>
+        </ul>
+    </nav>
+    <!----complete sidebar section------------->
+    <div class="icon">
+        <div class="iconn">
+            <img src="01.svg">
+    </div>
+</body>
+</html>

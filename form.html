@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Legends Only</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      height: 100vh;
+      background: radial-gradient(#0f0f0f, #121212);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #login-container {
+      background: rgba(30, 30, 30, 0.5);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 40px;
+      width: 320px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+      border: 1px solid rgba(0, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    #login-container:hover {
+      box-shadow: 0 0 35px rgba(0, 255, 255, 0.5);
+      transform: scale(1.02);
+    }
+    h2 {
+      color: #00ffff;
+      text-align: center;
+      margin-bottom: 25px;
+      text-shadow: 0 0 5px #00ffff;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    input {
+      background: #1b1b1b;
+      color: #fff;
+      border: 1px solid #00ffff22;
+    }
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 10px #00ffff88;
+    }
+    input:hover {
+      box-shadow: 0 0 8px #00ffffaa;
+    }
+    button {
+      background: #00ffff;
+      color: #121212;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ffff88;
+      transition: background 0.4s, transform 0.2s;
+    }
+    button:hover {
+      background: #00cccc;
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login-container">
+    <h2>Do Login and Visit Website</h2>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="submit()">Submit</button>
+  </div>
+  <script>
+    function submit(){
+          let username = document.getElementById("username").value.trim();
+          let password = document.getElementById("password").value.trim();
+
+          if(username === "zamin" && password === "12308"){
+            window.location.href = "2k25.html";
+          }
+          else(
+              alert("It is Incorrect username & passoword")
+          )
+    }
+  </script>
+</body>
+</html>

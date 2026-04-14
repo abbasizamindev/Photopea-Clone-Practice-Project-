@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photopea 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: "Open Sans", "Segoe UI", "sans-serif";
+    }
+    body{
+        background-image: radial-gradient(rgb(40, 40, 50), rgb(10, 0, 10));
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        scroll-behavior: smooth;
+    }
+    .navbar{
+            height: 58px;
+            width: 100%;
+            box-shadow: 1px 1px 3px white;
+            display: flex;
+            align-items: center;
+    }
+    .navbar .two-divs{
+            height: 46px;
+            width: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+    }
+    .navbar .two-divs .div-1{
+            height: 46px;
+            width: 230px;
+            display: flex;
+            font-size: 34px;
+            color: #e6e6e6;
+            gap: 10px;
+            align-items: center;
+    }
+    .navbar .two-divs .div-1 img{
+            height: 36px;
+            width: 36px;
+    }
+    .navbar .two-divs .div-2{
+            height: 45px;
+            width: 335px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+    }
+    .navbar .two-divs .div-2 li {
+    list-style: none;
+    margin-top: 8px;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+.navbar .two-divs .div-2 li a, 
+.navbar .two-divs .div-2 li i {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.4s ease;
+}
+.navbar .two-divs .div-2 li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(223, 21, 21);
+    transition: 0.4s ease;
+}
+.navbar .two-divs .div-2 li a:hover {
+    color: rgb(223, 21, 21);
+    text-shadow: 1px 1px 3px rgba(223, 21, 21, 0.7);
+}
+.navbar .two-divs .div-2 li a:hover::after {
+    width: 100%;
+}
+.navbar .two-divs .div-2 li:hover i {
+    transform: rotate(360deg) scale(1.3);
+    color: rgb(223, 21, 21);
+}
+
+/* <!---------------navbar compltete--------------> */
+.container2{
+        height: 240.64px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        color: #e6e6e6;
+}
+#b1{
+    font-size: 62.4px;
+}
+.container2 b{
+        font-size: 23.4px;
+}
+.container2 p{
+        font-size: 15.6px;
+}
+.btn1{
+        height: 38px;
+        width: 220px;
+        background-color: black;
+        border:2px solid #3482f6;
+        box-shadow: 0px 0px 1px #3482f6;
+        color: #e6e6e6;
+        font-size: 20.28px;
+        border-radius: 20px;
+        cursor: pointer;
+}
+.btn1:hover{
+        box-shadow: 0px 0px 30px #3482f6;
+        transition: 0.3s;
+}
+/* <!-----container2 complete------> */
+.container3{
+        height: 520px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: #e6e6e6;
+}
+.container3 .photo, .details{
+        height: 512px;
+        width: 550px;
+}
+.container3 .details{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+}
+.container3 .photo img{
+        height: 440px;
+        width: 440px;
+        margin-top: 10px;
+        margin-left: 20px;
+}
+.container3 .details b{
+        font-size: 23.4px;
+        margin-left: 8px;
+}
+.container3 .details p{
+        font-size: 15.6px;
+        margin-left: 8px;
+}
+.container3 .btn1{
+        margin-top: 50px;
+        align-self: center;
+}
+/* </--------container3 complete----------> */
+.container3 .photo #long{
+        height: 489px;
+        width: 385px;
+}
+.somewrite{
+        height: 31.2px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.somewrite b{
+            font-size: 24px;
+            color: #e6e6e6;
+}
+/* <!-------container4 complete--------> */
+footer .footer{
+        height: 80px;
+        width: 100%;
+        display: flex;
+        box-shadow: 0px 0px 3px gray;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        font-size: 18px;
+        font-weight: bold;
+}
+footer .footer li{
+                list-style: none;
+}
+footer .footer li a{
+                color: #e6e6e6;
+}
+footer .footer li a:hover{
+                color: blue;
+                transition: 0.3s;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+/* <!---------complete website-------------> */
+    @media screen and (min-width: 0px) {
+            .navbar, .navbar .two-divs{
+                    height: 110px;
+            }
+            .navbar .two-divs{
+                flex-direction: column;
+            }
+            .container2{
+                    height: 500px;
+                    text-align: center;
+            }
+           .container2 #b1{
+                    font-size: 60px;
+           }
+           .container3{
+                height: 900px;
+                flex-direction: column;
+                align-items: center;
+           }
+           .container3 .photo, .details{
+                    width: 335px;
+           }
+           .container3 .details{
+                    height: 530px;
+           }
+           .container3 .photo{
+                    height: 300px;
+                    display: flex;
+                    justify-content: center;
+           }
+           .container3 .photo img{
+                    height: 240px;
+                    width: 240px;
+                    margin-left: 0px;
+           }
+           #container4{
+                    height: 1100px;
+           }
+           #container4 #details{
+                    height: 650px;
+           }
+           #container4 #photo #long{
+                    height: 279.26px;
+                    width: 219.55px;
+           }
+           #container5{
+                    height: 1000px;
+           }
+           #container5 #detail{
+                    height: 650px;
+           }
+           .somewrite{
+                    height: 60px;
+                    text-align: center;
+           }
+           footer .footer{
+                        height: 190px;
+                        flex-direction: column;
+            }
+    }
+    @media screen and (min-width: 480px) {
+            .container2{
+                    height: 400px;
+            }
+            .container3 .photo, .details{
+                    width: 460px;
+           }
+           .container3 .photo{
+                    height: 350px;
+           }
+           .container3 .photo img{
+                    height: 331px;
+                    width: 331px;
+           }
+           #container4 #photo #long{
+                    height: 368.85px;
+                    width: 298.98px;
+            }
+            #container4 #photo{
+                    height: 380px;
+            }
+    }
+    @media screen and (min-width: 768px) {
+        .navbar .two-divs{
+                    flex-direction: row;
+                }
+        .navbar .two-divs{
+                    height: 58px;
+                }
+        .container2{
+                height: 300px;
+        }
+        .container3{
+                flex-direction: row;
+                height: 600px;
+        }
+        .container3 .photo{
+                    height: 558px;
+           }
+        .container3 .details{
+                    height: 558px;
+        }
+        .container3 .photo img{
+                height: 290px;
+                width: 290px;
+        }
+        #container4{
+                    height: 750px;
+        }
+        #container4 #photo{
+                height: 650px;
+        }
+        #container4 #photo #long{
+                height: 321.39px;
+                width: 252.66px;
+        }
+        #container5 #pic{
+                height: 650px;
+        }
+        #container5{
+                    height: 750px;
+        }
+        footer .footer{
+                        height: 80px;
+                        flex-direction: row;
+            }
+    }
+    @media screen and (min-width: 990px) {
+            .container3 .photo img{
+                    height: 384px;
+                    width: 384px;
+            }
+            #container4 #photo #long{
+                    height: 416.44px;
+                    width: 327.39px;
+            }
+    }
+
+</style>
+<body>
+    <div class="navbar">
+        <div class="two-divs">
+        <div class="div-1">
+            <img src="logo.png">
+            <b>Photopea</b>
+        </div>
+        <div class="div-2">
+            <li><a href="#"><i class="fas fa-graduation-cap"></i> Learn</a></li>
+            <li><a href="#"><i class="fas fa-laptop-code"></i> Tutorials</a></li>
+            <li><a href="#"><i class="fas fa-clone"></i> Templates</a></li>
+            <li><a href="#"><i class="fas fa-plug"></i> API</a></li>
+        </div>
+        </div>
+    </div>
+    <!-------------navbar complete--------------->
+<div class="container2">
+<b id="b1">Free Online Photo Editor</b>
+<b>Unlock your creativity with the best free photo editor.
+</b>
+<p>Transform your photos with professional-grade tools in a free online photo editor that works right in your browser. No downloads, no hassle.</p>
+<button class="btn1">Start using Photopea</button>
+</div>
+<!-----------container2 complete----------->
+<div class="container3">
+    <div class="photo"><img src="1.webp"></div>
+    <div class="details">
+        <b>Fully Local</b>
+        <p>There are no uploads. Photopea runs on your device, using your CPU and your GPU. All files open instantly, and never leave your device.</p>
+        <b>Cost-Effective</b>
+        <p>Enjoy all the premium features without spending a dime.</p>
+        <b>Convenient Editor</b>
+        <p>No need to install heavy software on your device. Just open your browser and start editing.</p>
+        <b>Runs Everywhere</b>
+        <p>Our photo editor runs on any device. The better hardware you have, the better it runs.</p>
+        <button class="btn1">Start using Photopea</button>
+    </div>
+</div>
+<!---------container3 complete------------->
+<div class="container3" id="container4">
+    <div class="details" id="details">
+        <b>Professional Editor</b>
+        <p>Photopea offers a full suite of editing tools, from basic features like cropping and resizing to advanced features such as layering, masking, and blending.</p>
+        <b>Full PSD support</b>
+        <p>Photopea fully supports a popular PSD format, both opening and saving files. It is the main format of Photopea.</p>
+        <b>Swiss knife for graphics</b>
+        <p>Open and edit PNG, JPG, GIF, BMP, WEBP, SVG, PDF, AI, AVIF, DDS, HEIC, TIFF, MP4, TGA, CDR, PDN, EPS, INDD, Figma and 40 other formats.</p>
+        <b>Perfect RAW support</b>
+        <p>Photopea opens DNG, CR2, CR3, NEF, ARW, RW2, RAF, ORF and FFF files. Set the Exposure, Color Balance, Contrast, Highlights and Shadows, etc.</p>
+        <button class="btn1">>Start using Photopea</button>
+    </div>
+    <div class="photo" id="photo"><img src="2.webp" id="long"></div>
+</div>
+<!---------container4 complete----------------->
+<div class="container3" id="container5">
+    <div class="photo" id="pic"><img src="gif.PNG"></div>
+    <div class="details" id="detail">
+        <b>State-of-the-art AI</b>
+        <p>Remove background with one click, or replace any part of an image with a new content through a text description.</p>
+        <b>All Essential Features</b>
+        <p>We have Layers, Masks, Layer Styles, Smart Objects, Adjustment Layers, Channels, Paths and more!.</p>
+        <b>Adjustments and Filters</b>
+        <p>Do you need Levels and Curves? A Gaussian Blur? Or advanced stuff such as Liquify or Puppet Warp? We have it all!</p>
+        <b>Vector Graphics</b>
+        <p>Create and edit vector graphics directly within the editor. Perfect for designers working on logos, icons, or illustrations.</p>
+        <button class="btn1">Start using Photopea</button>
+    </div>
+</div>
+<!-------------container5 complete-------------->
+<div class="somewrite"><b>Who Can Benefit from our Free Photo Editor?</b></div>
+<div class="container3" id="container4">
+    <div class="details" id="details">
+        <b>Socail Media Enthusiasts</b>
+        <p>Enhance your photos before sharing them on platforms like Instagram, Facebook, or Twitter. Make every post stand out with unique edits.</p>
+        <b>Students and Educators</b>
+        <p>Create stunning visuals for presentations, assignments, and more. Our free online photo editor is a great tool for educational projects.</p>
+        <b>Small Business Owners</b>
+        <p>Design promotional materials, edit product photos, and create engaging content for your website or online store, all without spending on expensive software.</p>
+        <b>Graphics Desginers</b>
+        <p>Whether you’re a freelancer or part of a design team, Photopea’s free photo editor offers all the features you need to produce professional-quality work.</p>
+        <button class="btn1">Start using Photopea</button>
+    </div>
+    <div class="photo" id="photo"><img src="3.webp"></div>
+</div>
+<!-------------container6 complete------------>
+<footer>
+        <div class="footer">
+                <li><a href="#">support@photopea.com</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google"></i></a></li>
+        </div>
+</footer>
+</body>
+<script>
+        const buttons = document.querySelectorAll('.btn1');
+        
+        buttons.forEach(button => {
+          button.addEventListener('click', function() {
+            document.body.classList.add('fade-out');
+            setTimeout(function() {
+              window.location.href = 'inner.html';
+            }, 500);
+          });
+        });
+        </script>
+</html>
